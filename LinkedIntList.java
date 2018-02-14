@@ -28,24 +28,27 @@ public class LinkedIntList {
         list2.add(4,7);
 
 
-      //  System.out.println((notEquals(list,list2)));
-        removeRange(1,3,list);
 
-        System.out.println(list);
+        //  System.out.println((notEquals(list,list2)));
+        //removeRange(1,3,list);
+
+        System.out.println(notEquals(list, list2));
+
+        // System.out.println(list);
         //switchPairs(list);
         //stutter(list);
-       // System.out.println(list);
+        // System.out.println(list);
 
-      //  list.set(4, 5);
+        //  list.set(4, 5);
 
-       // max(list);
-       // list.lastIndexOf(2, list);
-       // deleteBack(list);
-       // isSorted(list);
+        // max(list);
+        // list.lastIndexOf(2, list);
+        // deleteBack(list);
+        // isSorted(list);
 
         // System.out.println(list);
 
-       // countDuplicates(list);
+        // countDuplicates(list);
     }
 
     // post: returns the current number of elements in the list
@@ -242,7 +245,7 @@ public class LinkedIntList {
         if (list.isEmpty()) {
             Iterator it = list.iterator();
 
-                    it.next();
+            it.next();
         }
         int toReturn = 0;
         toReturn = list.get(list.size() - 1);
@@ -279,13 +282,13 @@ public class LinkedIntList {
         LinkedIntList list2 = new LinkedIntList();
         for (int i = 0; i < list.size ; i++) {
 
-             list2.add(list2.size,list.get(i));
-             list2.add(list2.size,list.get(i));
+            list2.add(list2.size,list.get(i));
+            list2.add(list2.size,list.get(i));
 
 
         }
         for (int j = 0; j < list.size;) {
-         list.remove(j);
+            list.remove(j);
 
         }
         for (int k = 0; k < list2.size ; k++) {
@@ -295,16 +298,19 @@ public class LinkedIntList {
         return list;
     }
 
-    // Kapitel 16 opgave 15 Ikke sikker på om det er rigtigt...
+    // Kapitel 16 opgave 15
 
     public static boolean notEquals(LinkedIntList list, LinkedIntList list2)
     {
+
         for (int i = 0; i < list.size ; i++) {
-            if(list2.contains(list.get(i))) {
+            if(list2.get(i) == list.get(i)) {
 
                 if (list.size == list2.size) {
                     return true;
                 }
+            }else{
+                return false;
             }
         }
         return false;
